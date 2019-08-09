@@ -1,0 +1,26 @@
+{
+  "name": "demo-microbundle",
+  "version": "0.0.0",
+  "source": "src/index.js",
+  "main": "lib/demo-microbundle.umd.js",
+  "module": "lib/demo-microbundle.mjs",
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "microbundle": "^0.11.0",
+    "parcel": "^1.12.3"
+  },
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "microbundle build --jsx React.createElement --external react -o lib"
+  },
+  "keywords": [],
+  "author": "David Konsumer <konsumer@jetboystudio.com> (http://konsumer.js.org)",
+  "license": "MIT"
+}
